@@ -514,7 +514,7 @@ class ManagedRelationshipDescription extends ManagedPropertyDescription {
       return APISchemaObject.array(ofSchema: relatedType)
         ..isReadOnly = true
         ..isNullable = true;
-    } else if (relationshipType == ManagedRelationshipType.hasOne) {
+    } else if (relationshipType == ManagedRelationshipType.hasOne || relationshipType == ManagedRelationshipType.belongsTo) {
       return relatedType
         ..isReadOnly = true
         ..isNullable = true;
